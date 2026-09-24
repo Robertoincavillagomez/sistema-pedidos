@@ -51,6 +51,26 @@ Si cambia el producto, se devuelve el stock correspondiente al producto anterior
 
 Al eliminar un pedido, la cantidad asociada al pedido se devuelve al stock antes de eliminar el registro.
 
+
+## Requisitos
+
+Para ejecutar el proyecto se requiere:
+
+- Java 21.
+- Maven.
+- WildFly.
+- Un navegador web.
+
+## Pruebas realizadas
+
+Las operaciones de edición y eliminación fueron probadas desde la aplicación en el navegador.
+
+Para la actualización de pedidos se utilizó JavaScript con `fetch()` enviando una petición HTTP `PUT` hacia `PedidoServlet`.
+
+Para la eliminación se utilizó `fetch()` enviando una petición HTTP `DELETE`.
+
+Ambas operaciones fueron verificadas desde DevTools, en la pestaña Network, comprobando que las solicitudes se enviaron realmente mediante los métodos `PUT` y `DELETE` y que las operaciones se realizaron correctamente.
+
 ## Ejecución
 
 La aplicación se ejecuta en WildFly mediante Maven.
